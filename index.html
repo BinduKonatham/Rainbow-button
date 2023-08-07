@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        text-align: center;
+        justify-content:center;
+        margin-top: 350px;
+    }
+    button {
+ border: none;
+ border-radius: 20px;
+ background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+ transition: all 1.5s ease;
+ font-family: 'Ropa Sans', sans-serif;
+ font-weight: bold;
+ letter-spacing: 0.05rem;
+ padding: 0;
+}
+
+button span {
+ display: inline-block;
+ padding: 15px 35px;
+ font-size: 30px;
+ border-radius: 20px;
+ background: #ffffff10;
+ backdrop-filter: blur(20px);
+ transition: 0.4s ease-in-out;
+ transition-property: color;
+ height: 100%;
+ width: 100%;
+}
+
+button span:hover {
+ backdrop-filter: blur(10px);
+ border-radius: 10px;
+ color: #ffffff;
+}
+</style>
+<body>
+    <button><span>Click Me!</span></button>
+</body>
+<script>
+    const button=document.querySelector("button");
+    const body=document.querySelector("body");
+    const color=['violet','indigo','blue','green','yellow','orange','red'];
+    body.style.backgroundColor='pink';
+    document.addEventListener('click',function(){
+           const colorIndex=parseInt(Math.random()*color.length);
+           body.style.backgroundColor=color[colorIndex];
+    });
+</script>
+</html>
